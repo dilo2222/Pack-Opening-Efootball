@@ -1,0 +1,14 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    width: 700px;
+    height: 400px;
+    margin: 0 auto;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card__logo {
+    object-fit: cover;
+}

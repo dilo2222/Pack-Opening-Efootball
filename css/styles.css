@@ -1,0 +1,55 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-image: linear-gradient(190deg, #5498d7, #ffffff);
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #acacac;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.coins__balance {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 5px;
+  background-color: rgba(252, 255, 168, 0.9254901961);
+}
+
+.balance {
+  font-size: 30px;
+  font-weight: 200;
+  line-height: 20px;
+}
+
+.main {
+  margin: 110px 0 0 0;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  width: 700px;
+  height: 400px;
+  margin: 0 auto;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card__logo {
+  -o-object-fit: cover;
+     object-fit: cover;
+}/*# sourceMappingURL=styles.css.map */
