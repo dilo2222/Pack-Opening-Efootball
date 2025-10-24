@@ -49,3 +49,23 @@ body {
 .hidden {
     display: none;
 }
+
+.overlay {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: #57575793;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.btn {
+    border-radius: 90px;
+    padding: 10px;
+    border: none;
+    color: #0084ff;
+    font-size: 15px;
+    min-width: 100px
+}
