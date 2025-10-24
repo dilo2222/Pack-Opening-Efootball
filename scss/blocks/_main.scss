@@ -9,6 +9,11 @@
     width: 100%;
 }
 
+.header_title {
+    text-transform: uppercase;
+    color:#0239ff;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -24,17 +29,23 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
-    border-radius: 5px;
-    background-color: #fcffa8ec;
+    gap: 20px;
+    border-radius: 90px;
+    background-color: #efeaf7;
+    padding: 10px;
 }
 
 .balance {
     font-size: 30px;
     font-weight: 200;
-    line-height: 20px
+    line-height: 20px;
+    color: #0084ff;
 }
 
 .main {
     margin: 110px  0 0 0;
+}
+
+.hidden {
+    display: none;
 }
