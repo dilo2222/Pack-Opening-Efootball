@@ -4,10 +4,10 @@
     right: 0;
     left: 0;
     bottom: 0;
-    width: 100vw;
+    width: 100%;
 
     @media (max-width: 800px) {
-        position: absolute;
+        position: fixed;
        top: 50%;
        transform: translateY(-50%);
     }
