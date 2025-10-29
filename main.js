@@ -166,7 +166,7 @@ if (currentBalance !== null) {
   localStorage.setItem("coins", JSON.stringify(balanceEl.textContent))
 }
 
-const openBtn = document.querySelector(".card__open-text")
+const openBtn = document.querySelector(".card__open")
 openBtn.addEventListener("click", function (e) {
   let coinsBalance = JSON.parse(localStorage.getItem("coins"))
   let playersAvailable = JSON.parse(localStorage.getItem("players"))
@@ -192,40 +192,56 @@ openBtn.addEventListener("click", function (e) {
       }
 
       setTimeout(() => {
-          animContainer.classList.add("hidden")
-        }, 7500)
+        animContainer.classList.add("hidden")
+      }, 7500)
 
       setTimeout(() => {
         const overlayEl = document.querySelector(".overlay")
-      overlayEl.classList.remove("hidden")
-      const popupEl = document.querySelector(".popup")
-      popupEl.classList.remove("hidden")
+        overlayEl.classList.remove("hidden")
+        const popupEl = document.querySelector(".popup")
+        popupEl.classList.remove("hidden")
 
-      const popupBg = document.querySelector(".popup__bg")
-      if (randomPlayer.type === "iconic") {
-        popupBg.setAttribute("src", "./img/iconic.jpg")
-      } else if (randomPlayer.type === "typical") {
-        popupBg.setAttribute("src", "./img/bgOrdinary.jpg")
-      }
+        const popupBg = document.querySelector(".popup__bg")
+        if (randomPlayer.type === "iconic") {
+          popupBg.setAttribute("src", "./img/iconic.jpg")
+        } else if (randomPlayer.type === "typical") {
+          popupBg.setAttribute("src", "./img/bgOrdinary.jpg")
+        }
 
-      const popupPosition = document.querySelector(".popup__position")
-      popupPosition.textContent = randomPlayer.position
-      const popupRating = document.querySelector(".popup__rating")
-      popupRating.textContent = randomPlayer.rating
-      const popupBall = document.querySelector(".popup__ball")
-      if (randomPlayer.rating >= 85) {
-        popupBall.style.backgroundColor = "black"
-      } else if (randomPlayer.rating <= 84) {
-        popupBall.style.backgroundColor = "grey"
-      }
-      const playerName = document.querySelector(".popup__name")
-      playerName.textContent = randomPlayer.name
-      const popupPhoto = document.querySelector(".popup__photo")
+        const popupPosition = document.querySelector(".popup__position")
+        popupPosition.textContent = randomPlayer.position
+        const popupRating = document.querySelector(".popup__rating")
+        popupRating.textContent = randomPlayer.rating
+        const popupBall = document.querySelector(".popup__ball")
+        if (randomPlayer.rating >= 85) {
+          popupBall.style.backgroundColor = "black"
+        } else if (randomPlayer.rating <= 84) {
+          popupBall.style.backgroundColor = "grey"
+        }
+        const playerName = document.querySelector(".popup__name")
+        playerName.textContent = randomPlayer.name
+        const popupPhoto = document.querySelector(".popup__photo")
       }, 7500)
 
-      
 
     }
   }
+})
+
+const deletebtn = document.querySelector(".popup__delete")
+deletebtn.addEventListener("click", function (e) {
+  const overlayEl = document.querySelector(".overlay")
+  overlayEl.classList.add("hidden")
+  const popupEl = document.querySelector(".popup")
+  popupEl.classList.add("hidden")
+})
+
+const keepBtn = document.querySelector(".popup__add")
+console.log(keepBtn)
+keepBtn.addEventListener("click", function(e) {
+  const overlayEl = document.querySelector(".overlay")
+  overlayEl.classList.add("hidden")
+  const popupEl = document.querySelector(".popup")
+  popupEl.classList.add("hidden")
 })
 
