@@ -180,7 +180,6 @@ openBtn.addEventListener("click", function (e) {
     if (playersAvailable) {
       const randomInd = Math.floor(Math.random() * playersAvailable.length)
       const randomPlayer = playersAvailable[randomInd]
-      console.log(randomPlayer)
       if (randomPlayer.type === "iconic") {
         animContainer.classList.remove("hidden")
         animVideo.muted = false
@@ -237,7 +236,6 @@ deletebtn.addEventListener("click", function (e) {
 })
 
 const keepBtn = document.querySelector(".popup__add")
-console.log(keepBtn)
 keepBtn.addEventListener("click", function(e) {
   const overlayEl = document.querySelector(".overlay")
   overlayEl.classList.add("hidden")

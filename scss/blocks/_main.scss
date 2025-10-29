@@ -12,6 +12,13 @@
 .header_title {
     text-transform: uppercase;
     color:#0239ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media (max-width: 620px) {
+        font-size: 15px;
+    }
 }
 
 body {
@@ -33,6 +40,12 @@ body {
     border-radius: 90px;
     background-color: #efeaf7;
     padding: 10px;
+
+    @media (max-width: 620px) {
+        gap: 10px;
+        padding: 5px;
+    }
+
 }
 
 .balance {
@@ -40,6 +53,19 @@ body {
     font-weight: 200;
     line-height: 20px;
     color: #0084ff;
+
+    @media (max-width: 620px) {
+        font-size: 15px;
+    font-weight: 20;
+    line-height: 15px;
+    }
+}
+
+.coins__logo {
+     @media (max-width: 620px) {
+        width: 20px;
+        height: 20px;
+    }
 }
 
 .main {
@@ -68,4 +94,11 @@ body {
     color: #0084ff;
     font-size: 15px;
     min-width: 100px
+}
+
+.header__logo {
+    @media (max-width: 620px) {
+        width: 100px;
+        height: 30px;
+    }
 }
