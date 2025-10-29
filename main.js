@@ -153,3 +153,47 @@ const players = [
   { name: "José Sá", rating: 81, position: "GK", type: "typical" },
   { name: "Álex Remiro", rating: 80, position: "GK", type: "typical" }
 ];
+
+localStorage.setItem("players", JSON.stringify(players))
+
+const balanceEl = document.querySelector(".balance")
+balanceEl.textContent = 5000
+
+const currentBalance = JSON.parse(localStorage.getItem("coins"))
+if (currentBalance !== null) {
+  balanceEl.textContent = currentBalance
+} else {
+  localStorage.setItem("coins", JSON.stringify(balanceEl.textContent))
+}
+
+const openBtn = document.querySelector(".card__open-text")
+openBtn.addEventListener("click", function(e) {
+  let coinsBalance = JSON.parse(localStorage.getItem("coins"))
+  let playersAvailable = JSON.parse(localStorage.getItem("players"))
+  const animVideo = document.querySelector(".animation__video")
+  const animContainer = document.querySelector(".animation")
+  
+  if (coinsBalance >= 100) {
+    let coins = coinsBalance -= 100
+    localStorage.setItem("coins", JSON.stringify(coins))
+    balanceEl.textContent = coins
+    if (playersAvailable) {
+      const randomInd = Math.floor(Math.random() * playersAvailable.length)
+      const randomPlayer = playersAvailable[randomInd]
+      console.log(randomPlayer)
+      if (randomPlayer.type === "iconic") {
+        animContainer.classList.remove("hidden")
+        animVideo.muted = false
+        animVideo.setAttribute("src", "./img/anm.mp4")
+      } else if (randomPlayer.type === "typical") {
+        animContainer.classList.remove("hidden")
+        animVideo.muted = false
+        animVideo.setAttribute("src", "./img/anm.mp4")
+      }
+
+    }
+  }
+  setTimeout(() => {
+    animContainer.classList.add("hidden")
+  }, 9500)
+})
