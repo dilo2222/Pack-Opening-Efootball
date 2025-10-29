@@ -12,6 +12,14 @@
 .header_title {
   text-transform: uppercase;
   color: #0239ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 620px) {
+  .header_title {
+    font-size: 15px;
+  }
 }
 
 body {
@@ -33,12 +41,32 @@ body {
   background-color: #efeaf7;
   padding: 10px;
 }
+@media (max-width: 620px) {
+  .coins__balance {
+    gap: 10px;
+    padding: 5px;
+  }
+}
 
 .balance {
   font-size: 30px;
   font-weight: 200;
   line-height: 20px;
   color: #0084ff;
+}
+@media (max-width: 620px) {
+  .balance {
+    font-size: 15px;
+    font-weight: 20;
+    line-height: 15px;
+  }
+}
+
+@media (max-width: 620px) {
+  .coins__logo {
+    width: 20px;
+    height: 20px;
+  }
 }
 
 .main {
@@ -69,14 +97,26 @@ body {
   min-width: 100px;
 }
 
+@media (max-width: 620px) {
+  .header__logo {
+    width: 100px;
+    height: 30px;
+  }
+}
+
 .card {
-  display: grid;
-  grid-template-columns: minmax(300px, 600px);
+  display: flex;
+  flex-direction: column;
+  width: 600px;
   background-color: #ffffff;
-  max-width: 600px;
   margin: 0 auto;
   border-radius: 10px;
   overflow: hidden;
+}
+@media (max-width: 650px) {
+  .card {
+    width: 380px;
+  }
 }
 
 .card__logo {
@@ -132,8 +172,15 @@ body {
   bottom: 0;
   width: 100vw;
 }
+@media (max-width: 800px) {
+  .animation {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
 
-.animation-video {
+.animation__video {
   width: 100%;
 }
 

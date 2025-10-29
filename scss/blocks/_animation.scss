@@ -5,9 +5,14 @@
     left: 0;
     bottom: 0;
     width: 100vw;
+
+    @media (max-width: 800px) {
+        position: absolute;
+       top: 50%;
+       transform: translateY(-50%);
+    }
 }
 
-.animation-video {
-    width: 100%;
-    
+.animation__video {
+    width: 100%; 
 }
