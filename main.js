@@ -166,13 +166,13 @@ if (currentBalance !== null) {
   localStorage.setItem("coins", JSON.stringify(balanceEl.textContent))
 }
 
-const openBtn = document.querySelector(".card__open-text")
-openBtn.addEventListener("click", function(e) {
+const openBtn = document.querySelector(".card__open")
+openBtn.addEventListener("click", function (e) {
   let coinsBalance = JSON.parse(localStorage.getItem("coins"))
   let playersAvailable = JSON.parse(localStorage.getItem("players"))
   const animVideo = document.querySelector(".animation__video")
   const animContainer = document.querySelector(".animation")
-  
+
   if (coinsBalance >= 100) {
     let coins = coinsBalance -= 100
     localStorage.setItem("coins", JSON.stringify(coins))
@@ -184,16 +184,64 @@ openBtn.addEventListener("click", function(e) {
       if (randomPlayer.type === "iconic") {
         animContainer.classList.remove("hidden")
         animVideo.muted = false
-        animVideo.setAttribute("src", "./img/anm.mp4")
+        animVideo.setAttribute("src", "./img/epicAnim.mp4")
       } else if (randomPlayer.type === "typical") {
         animContainer.classList.remove("hidden")
         animVideo.muted = false
-        animVideo.setAttribute("src", "./img/anm.mp4")
+        animVideo.setAttribute("src", "./img/ordinaryAnim.mp4")
       }
+
+      setTimeout(() => {
+        animContainer.classList.add("hidden")
+      }, 7500)
+
+      setTimeout(() => {
+        const overlayEl = document.querySelector(".overlay")
+        overlayEl.classList.remove("hidden")
+        const popupEl = document.querySelector(".popup")
+        popupEl.classList.remove("hidden")
+
+        const popupBg = document.querySelector(".popup__bg")
+        if (randomPlayer.type === "iconic") {
+          popupBg.setAttribute("src", "./img/iconic.jpg")
+        } else if (randomPlayer.type === "typical") {
+          popupBg.setAttribute("src", "./img/bgOrdinary.jpg")
+        }
+
+        const popupPosition = document.querySelector(".popup__position")
+        popupPosition.textContent = randomPlayer.position
+        const popupRating = document.querySelector(".popup__rating")
+        popupRating.textContent = randomPlayer.rating
+        const popupBall = document.querySelector(".popup__ball")
+        if (randomPlayer.rating >= 85) {
+          popupBall.style.backgroundColor = "black"
+        } else if (randomPlayer.rating <= 84) {
+          popupBall.style.backgroundColor = "grey"
+        }
+        const playerName = document.querySelector(".popup__name")
+        playerName.textContent = randomPlayer.name
+        const popupPhoto = document.querySelector(".popup__photo")
+      }, 7500)
+
 
     }
   }
-  setTimeout(() => {
-    animContainer.classList.add("hidden")
-  }, 9500)
 })
+
+const deletebtn = document.querySelector(".popup__delete")
+deletebtn.addEventListener("click", function (e) {
+  const overlayEl = document.querySelector(".overlay")
+  overlayEl.classList.add("hidden")
+  const popupEl = document.querySelector(".popup")
+  popupEl.classList.add("hidden")
+})
+
+const keepBtn = document.querySelector(".popup__add")
+console.log(keepBtn)
+keepBtn.addEventListener("click", function(e) {
+  const overlayEl = document.querySelector(".overlay")
+  overlayEl.classList.add("hidden")
+  const popupEl = document.querySelector(".popup")
+  popupEl.classList.add("hidden")
+})
+
