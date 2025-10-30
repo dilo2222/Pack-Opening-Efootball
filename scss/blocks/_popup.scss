@@ -38,6 +38,7 @@
     height: 50px;
     background-color: black;
     border-radius: 50%;
+    z-index: 1;
 }
 
 .popup__photo {
@@ -49,6 +50,7 @@
 .popup__rating,
 .popup__position {
     font-size: 40px;
+    z-index: 1;
 }
 
 .popup__bottom {
@@ -64,5 +66,9 @@
     font-size: 20px;
     color: #fff;
     display: flex;
+    z-index: 1;
+    width: 260px;
+    margin: 0 auto;
+    justify-content: center;
 }
 

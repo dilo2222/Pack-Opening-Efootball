@@ -7,6 +7,7 @@
   position: fixed;
   top: 0;
   width: 100%;
+  z-index: 10000;
 }
 
 .header_title {
@@ -225,6 +226,7 @@ body {
   height: 50px;
   background-color: black;
   border-radius: 50%;
+  z-index: 1;
 }
 
 .popup__photo {
@@ -236,6 +238,7 @@ body {
 .popup__rating,
 .popup__position {
   font-size: 40px;
+  z-index: 1;
 }
 
 .popup__bottom {
@@ -251,4 +254,42 @@ body {
   font-size: 20px;
   color: #fff;
   display: flex;
+  z-index: 1;
+  width: 260px;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.penalty__top {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 50vh;
+  background-image: linear-gradient(0deg, #369ad0, #fff);
+  z-index: -10;
+}
+
+.penalty__bottom {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 50vh;
+  background-color: rgb(15, 100, 32);
+  z-index: -10;
+}
+
+.penalty__goal {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.penalty__line {
+  width: 100%;
+  height: 8px;
+  position: absolute;
+  top: 21%;
+  background-color: #8d8a8a;
+  transform: rotate3d(10deg);
 }/*# sourceMappingURL=styles.css.map */

@@ -1,15 +1,15 @@
 const players = [
   // ==== ICONIC (10) ====
-  { name: "Pelé", rating: 98, position: "FW", type: "legendary", photo: ".img/pele.png"},
-  { name: "Diego Maradona", rating: 97, position: "FW", type: "legendary", photo: "./img/mesi.png" },
-  { name: "Lionel Messi", rating: 98, position: "FW", type: "legendary", photo: "./img/mesi.png" },
-  { name: "Cristiano Ronaldo", rating: 97, position: "FW", type: "legendary", photo: "./img/mesi.png" },
-  { name: "Zinedine Zidane", rating: 96, position: "MF", type: "legendary", photo: "./img/mesi.png" },
-  { name: "Ronaldinho", rating: 95, position: "FW", type: "legendary", photo: "./img/mesi.png" },
-  { name: "Ronaldo Nazário", rating: 94, position: "FW", type: "legendary", photo: "./img/mesi.png" },
-  { name: "Johan Cruyff", rating: 94, position: "FW", type: "legendary", photo: "./img/mesi.png" },
-  { name: "Paolo Maldini", rating: 93, position: "DF", type: "legendary", photo: "./img/mesi.png" },
-  { name: "Neymar Jr", rating: 92, position: "FW", type: "legendary", photo: "./img/mesi.png" },
+  { name: "Pelé", rating: 98, position: "FW", type: "iconic", photo: ".img/pele.png"},
+  { name: "Diego Maradona", rating: 97, position: "FW", type: "iconic", photo: "./img/maradona.png" },
+  { name: "Lionel Messi", rating: 98, position: "FW", type: "iconic", photo: "./img/mesi.png" },
+  { name: "Cristiano Ronaldo", rating: 97, position: "FW", type: "iconic", photo: "./img/Cristiano-Ronaldo-PNG-Pic.png" },
+  { name: "Zinedine Zidane", rating: 96, position: "MF", type: "iconic", photo: "./img/Zinedine-Zidane-Transparent-PNG.png" },
+  { name: "Ronaldinho", rating: 95, position: "FW", type: "iconic", photo: "./img/Ronaldinho-PNG-Photos.png" },
+  { name: "Ronaldo Nazário", rating: 94, position: "FW", type: "iconic", photo: "./img/ronaldo_nazario_by_coffepix_dgjjezp-fullview.png" },
+  { name: "Johan Cruyff", rating: 94, position: "FW", type: "iconic", photo: "./img/17592186179051_l.png.png" },
+  { name: "Paolo Maldini", rating: 93, position: "DF", type: "iconic", photo: "./img/17592186179010_l.png.png" },
+  { name: "Neymar Jr", rating: 92, position: "FW", type: "iconic", photo: "./img/Neymar-PSG-Transparent-PNG.png" },
   // ==== TYPICAL — FW/MF (70) ====
   { name: "Vinícius Jr", rating: 85, position: "FW", type: "typical" },
   { name: "Bukayo Saka", rating: 85, position: "FW", type: "typical" },
@@ -213,13 +213,17 @@ openBtn.addEventListener("click", function (e) {
 
   const popupBall = document.querySelector(".popup__ball")
   popupBall.style.backgroundColor =
-    randomPlayer.rating >= 85 ? "black" : "grey"
+    randomPlayer.rating >= 85 ? "black" : "gold"
 
   const playerName = document.querySelector(".popup__name")
   playerName.textContent = randomPlayer.name
 
   const playerPhoto = document.querySelector(".popup__photo")
-  playerPhoto.setAttribute("src", randomPlayer.photo)
+  if (randomPlayer.type === "iconic") {
+    playerPhoto.setAttribute("src", randomPlayer.photo)
+  } else {
+    playerPhoto.setAttribute("src", "./img/1761294205573xig0d1u5.webp")
+  }
 })
 
 
