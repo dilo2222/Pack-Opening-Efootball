@@ -156,7 +156,7 @@ const players = [
 localStorage.setItem("players", JSON.stringify(players))
 
 const balanceEl = document.querySelector(".balance")
-balanceEl.textContent = 5000
+balanceEl.textContent = 10000
 
 const currentBalance = JSON.parse(localStorage.getItem("coins"))
 if (currentBalance !== null) {
