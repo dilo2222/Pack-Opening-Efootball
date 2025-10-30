@@ -27,7 +27,49 @@
     width: 100%;
     height: 8px;
     position: absolute;
-    top: 21%;
+    top: 26%;
     background-color: #8d8a8a;
     transform: rotate3d(10deg)
+}
+
+.penalty__gk {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+
+.penalty__options{
+    display: flex;
+    position: fixed;
+    z-index: 10;
+    width: 400px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    list-style: none;
+    justify-content:space-between;
+    height: 200px;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+
+    li {
+        width: 50px;
+        justify-content: center;
+        display: flex;
+        z-index: 1000;
+        font-size: 60px;
+        color: #fff;
+        opacity: 0.4;
+        flex-grow: 1;
+        height: 100%;
+        align-items: center;
+
+        &:hover,
+        &:focus-visible {
+            opacity: 1;
+        }
+    }
 }
