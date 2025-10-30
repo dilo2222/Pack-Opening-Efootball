@@ -1,16 +1,15 @@
 const players = [
   // ==== ICONIC (10) ====
-  { name: "Lionel Messi", rating: 94, position: "FW", type: "iconic" },
-  { name: "Cristiano Ronaldo", rating: 93, position: "FW", type: "iconic" },
-  { name: "Kylian Mbappé", rating: 92, position: "FW", type: "iconic" },
-  { name: "Erling Haaland", rating: 91, position: "FW", type: "iconic" },
-  { name: "Kevin De Bruyne", rating: 91, position: "MF", type: "iconic" },
-  { name: "Neymar Jr", rating: 90, position: "FW", type: "iconic" },
-  { name: "Robert Lewandowski", rating: 90, position: "FW", type: "iconic" },
-  { name: "Mohamed Salah", rating: 89, position: "FW", type: "iconic" },
-  { name: "Harry Kane", rating: 89, position: "FW", type: "iconic" },
-  { name: "Luka Modrić", rating: 88, position: "MF", type: "iconic" },
-
+  { name: "Pelé", rating: 98, position: "FW", type: "legendary", photo: ".img/pele.png"},
+  { name: "Diego Maradona", rating: 97, position: "FW", type: "legendary", photo: "./img/mesi.png" },
+  { name: "Lionel Messi", rating: 98, position: "FW", type: "legendary", photo: "./img/mesi.png" },
+  { name: "Cristiano Ronaldo", rating: 97, position: "FW", type: "legendary", photo: "./img/mesi.png" },
+  { name: "Zinedine Zidane", rating: 96, position: "MF", type: "legendary", photo: "./img/mesi.png" },
+  { name: "Ronaldinho", rating: 95, position: "FW", type: "legendary", photo: "./img/mesi.png" },
+  { name: "Ronaldo Nazário", rating: 94, position: "FW", type: "legendary", photo: "./img/mesi.png" },
+  { name: "Johan Cruyff", rating: 94, position: "FW", type: "legendary", photo: "./img/mesi.png" },
+  { name: "Paolo Maldini", rating: 93, position: "DF", type: "legendary", photo: "./img/mesi.png" },
+  { name: "Neymar Jr", rating: 92, position: "FW", type: "legendary", photo: "./img/mesi.png" },
   // ==== TYPICAL — FW/MF (70) ====
   { name: "Vinícius Jr", rating: 85, position: "FW", type: "typical" },
   { name: "Bukayo Saka", rating: 85, position: "FW", type: "typical" },
@@ -218,6 +217,9 @@ openBtn.addEventListener("click", function (e) {
 
   const playerName = document.querySelector(".popup__name")
   playerName.textContent = randomPlayer.name
+
+  const playerPhoto = document.querySelector(".popup__photo")
+  playerPhoto.setAttribute("src", randomPlayer.photo)
 })
 
 
