@@ -32,7 +32,7 @@ penaltyOptions.addEventListener("click", function(e) {
     if (e.target.classList.contains("penalty__1")  && (gkDirection === 1 || gkDirection === 2)) {
         const coinsList = JSON.parse(localStorage.getItem("coins"))
         console.log(coinsList)
-        let coinsB =  coinsList + 100
+        let coinsB =  coinsList += 100
         localStorage.setItem("coins", JSON.stringify(coinsB))
         setTimeout(() => {
              overlayEl.classList.remove("hidden")
@@ -41,7 +41,7 @@ penaltyOptions.addEventListener("click", function(e) {
     } else if (e.target.classList.contains("penalty__2")  && (gkDirection === 0 || gkDirection === 2)) {
         const coinsList = JSON.parse(localStorage.getItem("coins"))
          console.log(coinsList)
-        let coinsB =  coinsList + 100
+        let coinsB =  coinsList += 100
         localStorage.setItem("coins", JSON.stringify(coinsB))
        setTimeout(() => {
              overlayEl.classList.remove("hidden")
@@ -50,7 +50,7 @@ penaltyOptions.addEventListener("click", function(e) {
     } else if (e.target.classList.contains("penalty__3")  && (gkDirection === 0 || gkDirection === 1)) {
          let coinsList = JSON.parse(localStorage.getItem("coins"))
           console.log(coinsList)
-        let coinsB =  coinsList + 100
+        let coinsB =  coinsList += 100
         localStorage.setItem("coins", JSON.stringify(coinsB))
         setTimeout(() => {
              overlayEl.classList.remove("hidden")
@@ -64,7 +64,7 @@ penaltyOptions.addEventListener("click", function(e) {
         }, 1000)
          let coinsList = JSON.parse(localStorage.getItem("coins"))
           console.log(coinsList)
-        let coinsB =  coinsList - 100
+        let coinsB =  coinsList -= 100
         localStorage.setItem("coins", JSON.stringify(coinsB))
        
     }
