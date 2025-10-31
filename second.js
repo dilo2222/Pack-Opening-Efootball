@@ -28,7 +28,7 @@ penaltyOptions.addEventListener("click", function(e) {
   if (gkDirection === 0) gk.classList.add("penalty__gk__left")
   else if (gkDirection === 2) gk.classList.add("penalty__gk__right")
 
-  let coinsList = JSON.parse(localStorage.getItem("coins"))
+  let coinsList = Number(localStorage.getItem("coins")) || o
   let coinsB = coinsList
 
   if (e.target.classList.contains("penalty__1") && (gkDirection === 1 || gkDirection === 2) ||
