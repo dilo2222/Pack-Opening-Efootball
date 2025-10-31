@@ -1,7 +1,7 @@
+.card__coins,
 .card {
     display: flex;
     flex-direction: column;
-    width: 600px;
     background-color: #ffffff;
     margin: 0 auto;
     border-radius: 10px;
@@ -29,6 +29,7 @@
     font-size: 25px;
     font-weight: bold;
     margin: 0 0 60px;
+    text-decoration: none;
 }
 
 .card__wrapper {
@@ -55,4 +56,21 @@
     font-size: 20px;
     color:  #0084ff;
     font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+}
+
+.cards__main{
+    display: grid;
+    grid-template-columns:repeat(2, minmax(350px, 600px)) ;
+    overflow: auto;
+    gap: 100px;
+    margin: 0 auto;
+
+    @media (max-width: 1300px) {
+        grid-template-columns: minmax(350px, 600px)
+
+    }
 }
