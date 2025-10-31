@@ -37,7 +37,6 @@ penaltyOptions.addEventListener("click", function(e) {
 
     coinsB = coinsList + 100
     localStorage.setItem("coins", JSON.stringify(coinsB))
-    coinsbalance.textContent = coinsB
 
     setTimeout(() => {
       overlayEl.classList.remove("hidden")
@@ -48,7 +47,6 @@ penaltyOptions.addEventListener("click", function(e) {
   } else {
     coinsB = coinsList - 100
     localStorage.setItem("coins", JSON.stringify(coinsB))
-    coinsbalance.textContent = coinsB
 
     setTimeout(() => {
       overlayEl.classList.remove("hidden")
